@@ -1,0 +1,26 @@
+@font-face {
+  font-family: Yekan;
+  src: url(./assets/fonts/YekanBakh-Regular.ttf);
+}
+@font-face {
+  font-family: YekanBold;
+  src: url(./assets/fonts/YekanBakh-Bold.ttf);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: Yekan;
+  font-size: 10px;
+}
+p,
+b {
+  margin: 0;
+}
