@@ -1,13 +1,13 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.scss';
-import Sidebar from './components/sidebar';
+import RootLayout from './layout/root';
 //pages
 //layout
 
 function App() {
   return (
     <>
-      <Sidebar />
+      <RootLayout />
     </>
   );
 }
