@@ -13,7 +13,7 @@ const sidebar = () => {
     <div className="sidebar">
       <img className="sidebar__logo" src="/outright.svg" alt="outright-logo" />
       <ul className="sidebar__pages">
-        <li>
+        <li className="active">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="28"

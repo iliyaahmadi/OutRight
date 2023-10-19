@@ -7,7 +7,7 @@ import { Outlet } from 'react-router-dom';
 const root = () => {
   return (
     <div className="root">
-      <Sidebar />
+      <Sidebar className="sidebar"/>
       <Outlet />
     </div>
   );
