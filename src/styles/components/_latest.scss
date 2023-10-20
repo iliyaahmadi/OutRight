@@ -3,5 +3,45 @@
 .latest {
   width: 100%;
   height: 370px;
-  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  position: relative;
+  &__top {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      font-size: 24px;
+    }
+    .btns {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      svg {
+        width: 22px;
+        height: 22px;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+  &__items {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 265px;
+    top: 65px;
+    gap: 50px;
+    overflow: hidden;
+  }
+}
+@media only screen and (max-width: 1700px) {
+  // .latest__items {
+  //   flex-wrap: wrap;
+  // }
 }
