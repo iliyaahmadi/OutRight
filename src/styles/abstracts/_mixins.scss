@@ -1,0 +1,15 @@
+@mixin rect_btn($w: 155px, $h: 45px, $bgColor: $white) {
+  width: #{w};
+  height: #{h};
+  border-radius: 50px;
+  background-color: #{$bgColor};
+  display: flex;
+  padding: 12px 25px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+}
