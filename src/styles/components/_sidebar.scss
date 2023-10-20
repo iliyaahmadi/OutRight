@@ -3,6 +3,7 @@
 .sidebar {
   height: 90vh;
   width: 120px;
+  min-width: 100px;
   position: -webkit-fixed;
   position: sticky;
   top: 50px;
