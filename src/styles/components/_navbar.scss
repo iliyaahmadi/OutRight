@@ -45,7 +45,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 45px;
     .tools {
       height: 100%;
       display: flex;
@@ -98,6 +97,7 @@
       border-radius: 50%;
       border: 2.5px solid white;
       overflow: hidden;
+      margin-right: 20px;
       &:hover {
         cursor: pointer;
         opacity: 0.9;
@@ -106,6 +106,42 @@
         width: 83px;
         height: 83px;
       }
+    }
+  }
+}
+
+.login {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  align-items: center;
+  &__faq {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $secondary-light;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    padding: 13px 31px;
+    background-color: $main;
+    align-items: center;
+    width: 180px;
+    height: 55px;
+    border-radius: 30px;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.9;
     }
   }
 }

@@ -1,9 +1,13 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.scss';
-import RootLayout from './layout/root';
-import Home from './pages/home';
+//components
+import LoginForm from './components/LoginForm';
+import SignupForm from './components/SignupForm';
 //pages
+import Home from './pages/home';
+import Auth from './pages/auth';
 //layout
+import RootLayout from './layout/root';
 
 const router = createBrowserRouter([
   {
@@ -14,10 +18,14 @@ const router = createBrowserRouter([
       // { path: '/discover', element: <Cat /> },
     ],
   },
-  // {
-  //   path: '/signup',
-  //   element: <Signup />,
-  // },
+  {
+    path: '/auth',
+    element: <Auth />,
+    children: [
+      { path: '/auth/login', element: <LoginForm /> },
+      { path: '/auth/signup', element: <SignupForm /> },
+    ],
+  },
 ]);
 
 function App() {
