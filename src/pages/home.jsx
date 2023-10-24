@@ -2,6 +2,7 @@ import Navbar from '../components/navbar';
 import Slider from '../components/slider';
 import Latest from '../components/latest';
 import Banner from '../components/banner';
+import Orders from '../components/orders';
 import Giftcard from '../components/giftcard';
 import Blog from '../components/blog';
 import Footer from '../components/footer';
@@ -14,6 +15,7 @@ function home() {
       <Slider />
       <Latest />
       <Banner />
+      <Orders />
       <Giftcard />
       <Blog />
       <Footer />
