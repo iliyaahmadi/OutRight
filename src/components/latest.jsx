@@ -1,6 +1,6 @@
 import '../styles/components/_latest.scss';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
-import { Navigation, A11y } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import mortalkombat from '../assets/img/mk-p.jpg';
 import payday from '../assets/img/payd-p.jpg';
 import fifa from '../assets/img/fifa-p.jpg';
@@ -42,8 +42,6 @@ const latest = () => {
       img: fifa,
     },
   ];
-
-  const swiper = useSwiper();
 
   return (
     <div className="latest">
@@ -87,14 +85,10 @@ const latest = () => {
       <div className="latest__items">
         <Swiper
           className="wrapper"
-          modules={[Navigation, A11y]}
+          modules={[Navigation]}
           navigation
           spaceBetween={43}
           slidesPerView="auto"
-          onSlideChange={() => {
-            console.log('slide');
-          }}
-          onSwiper={(swiper) => console.log(swiper)}
         >
           {data.map((data) => {
             return (

@@ -3,5 +3,46 @@
 .blog {
   width: 100%;
   height: 370px;
-  border: 1px solid white;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 25px;
+  &__top {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      font-size: 24px;
+    }
+    .btns {
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      svg {
+        width: 22px;
+        height: 22px;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+  &__items {
+    width: 100%;
+    height: 313px;
+    position: absolute;
+    top: 67px;
+    display: flex;
+    align-items: flex-end;
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      overflow: hidden;
+    }
+  }
 }
