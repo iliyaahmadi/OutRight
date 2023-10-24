@@ -1,9 +1,81 @@
 @import '../main';
 
-
-.giftcard{
-    width: 100%;
-    height: 325px;
+.giftcards {
+  width: 100%;
+  height: 325px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  &__card {
+    width: 235px;
+    height: 100%;
     display: flex;
-    border: 1px solid white;
+    position: relative;
+    img {
+      margin-top: auto;
+    }
+    .logo {
+      width: 180px;
+      height: 180px;
+      left: 25px;
+      top: 0;
+      position: absolute;
+    }
+    .desc {
+      position: absolute;
+      bottom: 36px;
+      right: 25px;
+      height: 75px;
+      width: 80%;
+      max-width: 185px;
+    }
+  }
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  &__title {
+    h2 {
+      font-size: 25px;
+    }
+  }
+  &__type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      font-size: 19px;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    .desc__type{
+        opacity: .9;
+    }
+  }
+}
+
+.epic {
+  width: 100%;
+  height: 87%;
+  filter: drop-shadow(0px 0px 50px rgba(255, 255, 255, 0.08));
+}
+.steam {
+  width: 100%;
+  height: 87%;
+  filter: drop-shadow(0px 0px 50px rgba(26, 70, 97, 0.08));
+}
+.ps {
+  width: 100%;
+  height: 87%;
+  filter: drop-shadow(0px 0px 50px rgba(16, 124, 16, 0.08));
+}
+.xbox {
+  width: 100%;
+  height: 87%;
+  filter: drop-shadow(0px 0px 50px rgba(0, 67, 156, 0.08));
 }
