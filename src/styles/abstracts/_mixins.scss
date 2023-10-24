@@ -1,3 +1,4 @@
+//buttons used in main page
 @mixin rect_btn($w: 155px, $h: 45px, $bgColor: $white, $radius: 50px) {
   width: #{w};
   height: #{h};
@@ -11,5 +12,57 @@
   &:hover {
     cursor: pointer;
     opacity: 0.9;
+  }
+}
+
+//buttons used in signup & etc...
+@mixin form_btn(
+  $w: 100%,
+  $h: 55px,
+  $bgColor: $main,
+  $radius: 12px,
+  $color: white
+) {
+  width: #{w};
+  height: #{h};
+  border-radius: $radius;
+  background: #{$bgColor};
+  display: flex;
+  padding: 12px 0;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #{$color};
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+}
+
+//inputs used in signup & etc...
+@mixin form_input($w: 100%, $h: 63px, $bg: #24212f, $radius: 12px) {
+  width: #{w};
+  height: #{h};
+  border-radius: $radius;
+  background-color: #{$bg};
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  font-size: 16px;
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: white !important;
+  }
+  &:focus {
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background-color: #{$bg};
+  }
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
   }
 }
