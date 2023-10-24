@@ -2,8 +2,13 @@ import '../styles/components/_LoginForm.scss';
 
 const LoginForm = () => {
   return (
-    <div>LoginForm</div>
-  )
-}
+    <div className="form">
+      <div className="form__welcome">
 
-export default LoginForm
+      </div>
+      div.form__
+    </div>
+  );
+};
+
+export default LoginForm;

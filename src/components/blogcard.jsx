@@ -3,7 +3,7 @@ import '../styles/components/_blogcard.scss';
 
 const blogcard = (data) => {
   return (
-    <div key={data.img} className="blog-post">
+    <div className="blog-post">
       <div className="cover">
         <img src={data.img} alt={data.name} />
       </div>
