@@ -1,0 +1,70 @@
+@import '../main';
+
+.orders {
+  width: 100%;
+  height: 300px;
+  border-radius: 25px;
+  padding: 50px;
+  gap: 50px;
+  display: flex;
+  background-color: $secondary-light;
+  &__right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    h2 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 20px;
+      font-family: YekanLight;
+    }
+  }
+  &__left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    h2 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 20px;
+      font-family: YekanLight;
+    }
+    .status {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 25px;
+      .box {
+        width: max-content;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        height: 31px;
+        p {
+          font-family: Yekan;
+        }
+      }
+    }
+    .progress {
+      height: 7px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      direction: ltr;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-top: auto;
+      progress {
+        width: 100%;
+        height: 7px;
+        color: $main;
+      }
+    }
+  }
+}
