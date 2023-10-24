@@ -1,0 +1,39 @@
+@import '../main';
+
+.swiper-button-prev {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: -60px;
+  left: 34px;
+  background-image: url('/src/assets/icons/arrow-left.svg') !important;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.swiper-button-next {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  background-image: url('/src/assets/icons/arrow-right.svg') !important;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev::after {
+  display: none;
+}

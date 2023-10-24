@@ -1,11 +1,12 @@
 import '../styles/components/_latest.scss';
-import LatestCard from './latestCard';
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Navigation, A11y } from 'swiper/modules';
 import mortalkombat from '../assets/img/mk-p.jpg';
 import payday from '../assets/img/payd-p.jpg';
 import fifa from '../assets/img/fifa-p.jpg';
 import gow from '../assets/img/gow-p.jpg';
 import pubg from '../assets/img/pubg-p.jpg';
-
+import SwiperNavButton from './swipernavbtn';
 const latest = () => {
   const data = [
     {
@@ -32,13 +33,25 @@ const latest = () => {
       name: 'mortalkombat',
       img: mortalkombat,
     },
+    {
+      name: 'payday',
+      img: payday,
+    },
+    {
+      name: 'fifa',
+      img: fifa,
+    },
   ];
+
+  const swiper = useSwiper();
+
   return (
     <div className="latest">
       <div className="latest__top">
         <h2>جدید ترین بازی ها</h2>
         <div className="btns">
           <svg
+            onClick={() => swiper.slidePrev()}
             width="20"
             height="20"
             viewBox="0 0 20 20"
@@ -54,6 +67,7 @@ const latest = () => {
             />
           </svg>
           <svg
+            onClick={() => swiper.slideNext()}
             width="20"
             height="20"
             viewBox="0 0 20 20"
@@ -71,17 +85,37 @@ const latest = () => {
         </div>
       </div>
       <div className="latest__items">
-        {data.map((person) => {
-          return <LatestCard {...person} />;
-        })}
-        {/* <img src="/src/assets/img/mk-p.jpg" alt="product" />
-        <img src="/src/assets/img/payd-p.jpg" alt="product" />
-        <img src="/src/assets/img/fifa-p.jpg" alt="product" />
-        <img src="/src/assets/img/gow-p.jpg" alt="product" />
-        <img src="/src/assets/img/pubg-p.jpg" alt="product" /> */}
+        <Swiper
+          className="wrapper"
+          modules={[Navigation, A11y]}
+          navigation
+          spaceBetween={43}
+          slidesPerView="auto"
+          onSlideChange={() => {
+            console.log('slide');
+          }}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          {data.map((data) => {
+            return (
+              <SwiperSlide key={data.img} className="latestCard">
+                <img src={data.img} alt={data.name} />
+              </SwiperSlide>
+            );
+          })}
+          <SwiperNavButton />
+        </Swiper>
       </div>
     </div>
   );
 };
 
 export default latest;
+
+{
+  /* <img src="/src/assets/img/mk-p.jpg" alt="product" />
+<img src="/src/assets/img/payd-p.jpg" alt="product" />
+<img src="/src/assets/img/fifa-p.jpg" alt="product" />
+<img src="/src/assets/img/gow-p.jpg" alt="product" />
+<img src="/src/assets/img/pubg-p.jpg" alt="product" /> */
+}
