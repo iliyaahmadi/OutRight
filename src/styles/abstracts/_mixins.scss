@@ -1,7 +1,7 @@
-@mixin rect_btn($w: 155px, $h: 45px, $bgColor: $white) {
+@mixin rect_btn($w: 155px, $h: 45px, $bgColor: $white, $radius: 50px) {
   width: #{w};
   height: #{h};
-  border-radius: 50px;
+  border-radius: $radius;
   background-color: #{$bgColor};
   display: flex;
   padding: 12px 25px;

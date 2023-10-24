@@ -3,6 +3,37 @@
 .footer {
   width: 100%;
   height: 395px;
-  border: 1px solid white;
-  border-radius: 25px 25px 0 0 ;
+  background: linear-gradient(180deg, #24212f 0%, rgba(36, 33, 47, 0) 100%);
+  border-radius: 25px;
+  padding: 50px 228px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  &__title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5.33px;
+    img {
+      width: 42px;
+      height: 46.667px;
+    }
+  }
+  &__desc {
+    height: 119px;
+    font-size: 18px;
+    text-align: center;
+  }
+  &__links {
+    display: flex;
+    gap: 25px;
+    width: 100%;
+    justify-content: center;
+    .btn {
+      width: 120px;
+      height: 45px;
+      @include rect_btn(120px, 45px, $main, 25px);
+    }
+  }
 }
