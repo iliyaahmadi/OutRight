@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../styles/components/_navbar.scss';
+import NotifModal from './NotifModal';
 
 const navbar = () => {
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
+  const [notifModal, setnotifModal] = useState(false);
+
+  const showModal = () => {
+    !notifModal ? setnotifModal(true) : setnotifModal(false);
+    console.log(notifModal);
+    return;
+  };
   return (
     <div className="navbar">
       <div className="navbar__title">
@@ -35,7 +43,7 @@ const navbar = () => {
                 />
               </svg>
             </div>
-            <div className="notif">
+            <div className="notif" onClick={() => showModal()}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -49,6 +57,7 @@ const navbar = () => {
                 />
               </svg>
             </div>
+            {notifModal ? <NotifModal className="notif-modal" /> : null}
             <div className="profile">
               <img src="/src/assets/img/profile.jpg" alt="profile" />
             </div>
