@@ -2,29 +2,36 @@
 
 .banner {
   width: 100%;
-  height: 270px;
+  height: fit-content;
   display: flex;
   gap: 50px;
+  flex-wrap: wrap;
   &__game {
     width: calc(50% - 25px);
+    display: flex;
+    min-width: 400px;
     height: 100%;
     border-radius: 25px;
     position: relative;
-    display: flex;
     align-items: flex-end;
     overflow: hidden;
     img {
       position: absolute;
+      z-index: 0;
     }
     .fort {
-      height: 130%;
-      top: 10px;
-      right: 0px;
+      width: 50%;
+      min-width: 330px;
+      height: 250%;
+      top: 0;
+      right: -40px;
     }
     .teemo {
-      height: 110%;
-      top: 10px;
-      right: -45px;
+      width: 50%;
+      min-width: 330px;
+      height: 180%;
+      top: -40px;
+      right: -55px;
     }
     .bg {
       width: 100%;
@@ -32,25 +39,34 @@
       background-color: $secondary-light;
       border-radius: 25px;
       margin-top: auto;
-      padding: 37px 315px 38px 50px;
+      padding: 6% 50% 6% 6%;
       gap: 25px;
       &__desc {
         display: flex;
         flex-direction: column;
         gap: 6px;
+        z-index: 1;
         h2 {
           font-size: 24px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
         }
         p {
+          width: 200px;
           font-size: 17px;
+          text-overflow: ellipsis;
+          overflow: hidden;
         }
       }
       &__view {
         display: flex;
         gap: 30px;
+        z-index: 1;
         p {
           color: $main;
           font-size: 18px;
+          white-space: nowrap;
         }
         svg {
           color: $main;
@@ -66,5 +82,27 @@
         }
       }
     }
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .banner {
+    &__game {
+      width: 100%;
+    }
+    .fort {
+      width: 40%;
+      top: -10px;
+    }
+    .teemo {
+      width: 40%;
+      top: -20px;
+    }
+    // .bg {
+    //   &__view {
+    //     p{
+    //       display: none;
+    //     }
+    //   }
+    // }
   }
 }
