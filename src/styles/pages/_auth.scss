@@ -8,10 +8,15 @@
   z-index: 1;
   &__form {
     width: 40%;
+    min-width: 500px;
     height: 100%;
     padding: 0 105px;
     display: flex;
+    align-items: center;
     justify-content: center;
+    position: inherit;
+    z-index: 2;
+    background-color: $secondary;
   }
   &__img {
     width: 60%;
@@ -25,7 +30,7 @@
     position: absolute;
     height: 100%;
     width: 60%;
-    z-index: 100;
+    z-index: 1;
     background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.25) 0%,

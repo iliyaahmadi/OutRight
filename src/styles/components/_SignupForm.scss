@@ -8,6 +8,12 @@
   align-items: center;
   justify-content: center;
   gap: 25px;
+  overflow: scroll;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
   &__welcome {
     display: flex;
     flex-direction: column;
@@ -74,4 +80,18 @@
 }
 .half {
   width: 50%;
+}
+
+@media only screen and (max-width: 1300px) {
+  .half {
+    width: 100%;
+  }
+  .form {
+    &__inputs {
+      div {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
 }
