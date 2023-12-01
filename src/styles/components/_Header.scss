@@ -154,6 +154,20 @@
   }
 }
 
+.mobile__btn {
+  display: none;
+  justify-content: center;
+  background-color: $main;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .header {
     &__title {
@@ -183,6 +197,56 @@
   }
   .login {
     .login__faq {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .header {
+    &__search {
+      width: 60%;
+    }
+    &__left {
+      .profile {
+        display: none;
+      }
+      .tools {
+        .cart {
+          display: none;
+        }
+      }
+      .mobile__btn {
+        display: flex;
+      }
+    }
+  }
+  .login {
+    &__btn {
+      display: none;
+    }
+    .mobile__btn {
+      display: flex;
+    }
+  }
+}
+@media only screen and (max-width: 435px) {
+  .header {
+    gap: 0;
+    &__search {
+      width: 100%;
+    }
+    &__left {
+      .mobile__btn {
+        display: none;
+      }
+    }
+  }
+  .login {
+    &__btn {
+      display: none;
+    }
+    .mobile__btn {
       display: none;
     }
   }

@@ -12,10 +12,10 @@ function home() {
   return (
     <div className="home">
       <Header />
-      <Slider />
+      {/* <Slider className="slider" /> */}
       <Latest />
-      <Banner />
-      <Orders />
+      {/* <Banner /> */}
+      {/* <Orders /> */}
       <Giftcard />
       <Blog />
       <Footer />
