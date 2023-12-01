@@ -4,7 +4,7 @@ import '../styles/components/_navbar.scss';
 import NotifModal from './NotifModal';
 
 const navbar = () => {
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
   const [notifModal, setnotifModal] = useState(false);
 
   const showModal = () => {
