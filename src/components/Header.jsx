@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import '../styles/components/_navbar.scss';
+import '../styles/components/_Header.scss';
 import NotifModal from './NotifModal';
 
-const navbar = () => {
+const header = () => {
   const [isLogin, setIsLogin] = useState(false);
   const [notifModal, setnotifModal] = useState(false);
 
@@ -13,20 +13,20 @@ const navbar = () => {
     return;
   };
   return (
-    <div className="navbar">
-      <div className="navbar__title">
+    <div className="header">
+      <div className="header__title">
         {isLogin ? (
           <h2>وقتت بخیر, ایلیا احمدی</h2>
         ) : (
           <h2> به اوت رایت خوش آمدید </h2>
         )}
       </div>
-      <div className="navbar__search">
+      <div className="header__search">
         <label>
           <input type="text" placeholder="جستجو کنید..." />
         </label>
       </div>
-      <div className="navbar__left">
+      <div className="header__left">
         {isLogin ? (
           <div className="tools">
             <div className="cart">
@@ -89,4 +89,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default header;

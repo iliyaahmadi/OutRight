@@ -1,4 +1,4 @@
-import Navbar from '../components/navbar';
+import Header from '../components/Header';
 import Slider from '../components/slider';
 import Latest from '../components/latest';
 import Banner from '../components/banner';
@@ -11,7 +11,7 @@ import '../styles/pages/_home.scss';
 function home() {
   return (
     <div className="home">
-      <Navbar />
+      <Header />
       <Slider />
       <Latest />
       <Banner />
