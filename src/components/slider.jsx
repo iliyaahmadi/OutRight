@@ -154,6 +154,43 @@ function slider() {
           />
         </div>
       </div>
+      <div className="mobile">
+        <div className="mobile__to-right">
+          <img src="./src/assets/icons/slide-mobile.svg" alt="slide" />
+        </div>
+        <div className="mobile__content content">
+          <div className="content__img">
+            <img src="./src/assets/icons/valorant.svg" alt="" />
+          </div>
+          <div className="content__title">
+            <h1>ولورانت پوینت</h1>
+          </div>
+          <div className="content__btn">
+            <img src="./src/assets/icons/view_btn.svg" alt="view-btn" />
+          </div>
+        </div>
+        <div className="mobile__to-left">
+          <img src="./src/assets/icons/slide-mobile.svg" alt="slide" />
+        </div>
+        {/* <div className="mobile__offer">
+          <svg
+            width="23"
+            height="21"
+            viewBox="0 0 23 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.2698 14.2147C19.9854 12.2563 21.33 9.82728 21.33 7.09943C21.33 3.54183 18.2805 1.04477 15.231 1.00066C13.7062 0.97859 12.1815 1.50891 11.165 3.0336C10.1485 1.50891 8.59737 1.00066 7.099 1.00066C4.0495 1.00066 1 3.54183 1 7.09943C1 14.2147 10.1485 19.297 11.165 19.297C11.4487 19.297 12.3661 18.901 13.5413 18.1753C13.9653 17.9134 14.4229 17.6087 14.8964 17.2641"
+              stroke="#2E25BD"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          <p>فروش ویژه</p>
+        </div> */}
+      </div>
     </div>
   );
 }
