@@ -41,7 +41,8 @@
 }
 
 @media only screen and (max-width: 700px) {
-  .auth { height: 100%;
+  .auth {
+    height: 100%;
     padding: 40px 0;
     &__form {
       width: 100%;

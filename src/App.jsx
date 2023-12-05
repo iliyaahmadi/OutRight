@@ -8,10 +8,12 @@ import VerifyCodeForm from './components/VerifyCodeForm';
 import NewPassForm from './components/NewPassForm';
 import SuccessPass from './components/SuccessPass';
 //pages
-import Home from './pages/home';
-import Auth from './pages/auth';
+import Home from './pages/Home';
+import Auth from './pages/Auth';
+import Product from './pages/Product';
 //layout
 import RootLayout from './layout/root';
+import PanelLayout from './layout/panel';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +34,18 @@ const router = createBrowserRouter([
       { path: '/auth/verify', element: <VerifyCodeForm /> },
       { path: '/auth/newpassword', element: <NewPassForm /> },
       { path: '/auth/success', element: <SuccessPass /> },
+    ],
+  },
+  {
+    path: '/product',
+    element: <RootLayout />,
+    children: [{ index: true, element: <Product /> }],
+  },
+  {
+    path: '/panel',
+    element: <PanelLayout />,
+    children: [
+      // { index: true, element: <Home /> },
     ],
   },
 ]);

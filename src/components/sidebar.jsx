@@ -8,7 +8,7 @@ const sidebar = () => {
       <img className="sidebar__logo" src="/outright.svg" alt="outright-logo" />
       <ul className="sidebar__pages">
         <NavLink to="/">
-          <li className="active">
+          <li>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="28"
@@ -41,7 +41,7 @@ const sidebar = () => {
             </svg>
           </li>
         </NavLink>
-        <NavLink to="/products">
+        <NavLink to="/product">
           <li>
             <svg
               width="28"
@@ -109,7 +109,7 @@ const sidebar = () => {
             </svg>
           </li>
         </NavLink>
-        <NavLink to="/support">
+        <NavLink to="/panel">
           <li>
             <svg
               width="28"

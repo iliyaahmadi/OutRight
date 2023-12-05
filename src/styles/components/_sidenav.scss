@@ -1,0 +1,37 @@
+@import '../main';
+
+.sidenav {
+  width: 240px;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  min-width: 100px;
+  background-color: $secondary-light;
+  flex-direction: column;
+  padding: 81px 25px 20px 25px;
+  overflow: hidden;
+  &__items {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 20px;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      padding: 10px;
+      height: 100%;
+      border-radius: 10px;
+      opacity: 0.7;
+    }
+  }
+  .active {
+    opacity: 1;
+    .icon {
+      color: $main;
+    }
+  }
+}
