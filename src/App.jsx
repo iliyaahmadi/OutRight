@@ -11,6 +11,7 @@ import SuccessPass from './components/SuccessPass';
 import Home from './pages/Home';
 import Auth from './pages/Auth';
 import Product from './pages/Product';
+import Overview from './pages/Overview';
 //layout
 import RootLayout from './layout/root';
 import PanelLayout from './layout/panel';
@@ -44,9 +45,7 @@ const router = createBrowserRouter([
   {
     path: '/panel',
     element: <PanelLayout />,
-    children: [
-      // { index: true, element: <Home /> },
-    ],
+    children: [{ index: true, element: <Overview /> }],
   },
 ]);
 

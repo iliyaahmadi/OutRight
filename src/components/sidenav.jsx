@@ -7,6 +7,7 @@ import PeopleIcon from '@mui/icons-material/People';
 import InventoryIcon from '@mui/icons-material/Inventory';
 import LocalAtmIcon from '@mui/icons-material/LocalAtm';
 import MessageIcon from '@mui/icons-material/Message';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 const sidenav = () => {
   return (
     <div className="sidenav">
@@ -39,6 +40,12 @@ const sidenav = () => {
           <li>
             <MessageIcon fontSize="large" className="icon" />
             <p> بلاگ</p>
+          </li>
+        </NavLink>
+        <NavLink to="/">
+          <li>
+            <ExitToAppIcon fontSize="large" className="icon" />
+            <p> خروج</p>
           </li>
         </NavLink>
       </ul>
